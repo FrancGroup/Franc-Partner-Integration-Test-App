@@ -26,10 +26,29 @@ class HomeScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const WebViewApp()),
+                    MaterialPageRoute(
+                        builder: (context) => WebViewApp(
+                            "https://155d4d8a.franc-partner-integration.pages.dev/register")),
                   );
                 },
-                child: Text('PRESS ME'),
+                child: Text('REGISTER'),
+              ),
+              TextButton(
+                style: TextButton.styleFrom(
+                  padding: EdgeInsets.all(16.0),
+                  primary: Colors.orange,
+                  backgroundColor: Colors.white,
+                  textStyle: TextStyle(fontSize: 20),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => WebViewApp(
+                            "https://155d4d8a.franc-partner-integration.pages.dev/deposit")),
+                  );
+                },
+                child: Text('DEPOSIT'),
               ),
             ]),
       ),

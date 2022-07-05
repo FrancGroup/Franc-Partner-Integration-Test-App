@@ -5,21 +5,23 @@ import 'package:franc_third_party_integration_demo/home_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewApp extends StatefulWidget {
-  const WebViewApp({Key? key}) : super(key: key);
+  final String url;
+
+  WebViewApp(this.url);
 
   @override
-  State<WebViewApp> createState() => _WebViewAppState();
+  _WebViewAppState createState() => _WebViewAppState();
 }
 
 class _WebViewAppState extends State<WebViewApp> {
-  var url = "https://155d4d8a.franc-partner-integration.pages.dev/register";
+  var url = "";
   final Completer<WebViewController> _webviewController =
       Completer<WebViewController>();
   @override
   Widget build(BuildContext context) {
     return Stack(children: <Widget>[
       WebView(
-        initialUrl: url,
+        initialUrl: widget.url,
         javascriptMode: JavascriptMode.unrestricted,
         onWebViewCreated: (WebViewController webviewController) {
           _webviewController.complete(webviewController);
