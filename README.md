@@ -1,2 +1,2 @@
 # Franc-Partner-Integration-Test-App
-Test Flutter Application for Franc Third Party Integration
+Demo for paymenow in feature/setup-app branch
